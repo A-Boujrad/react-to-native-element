@@ -1,0 +1,59 @@
+name: release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'       # v1.2.3 -> déclenche publication
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    # OIDC + provenance npm
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'           # >= 18.17 ok
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'npm'
+
+      - name: Install
+        run: npm ci
+
+      # Optionnel: sanity check du bundle
+      - name: Build
+        run: npm run build
+
+      # Publie sur npm. Ton `prepublishOnly` lancera `test && build` si présent.
+      - name: Publish to npm (with provenance)
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm config set provenance true
+          npm publish --access public
+  publish-gh-packages:
+    runs-on: ubuntu-latest
+    needs: publish-npm
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@<your-scope>'   # si package scoped
+      - name: Configure npmrc for GH Packages
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
+      - name: Publish to GH Packages
+        run: npm publish

@@ -1,0 +1,336 @@
+:root {
+    /* Palette */
+    --mui-palette-primary-light: #42a5f5;
+    --mui-palette-primary-main: #1976d2;
+    --mui-palette-primary-dark: #1565c0;
+    --mui-palette-primary-contrastText: #fff;
+
+    --mui-palette-secondary-light: #ba68c8;
+    --mui-palette-secondary-main: #9c27b0;
+    --mui-palette-secondary-dark: #7b1fa2;
+    --mui-palette-secondary-contrastText: #fff;
+
+    --mui-palette-error-light: #ef5350;
+    --mui-palette-error-main: #d32f2f;
+    --mui-palette-error-dark: #c62828;
+    --mui-palette-error-contrastText: #fff;
+
+    --mui-palette-warning-light: #ff9800;
+    --mui-palette-warning-main: #ed6c02;
+    --mui-palette-warning-dark: #e65100;
+    --mui-palette-warning-contrastText: #fff;
+
+    --mui-palette-info-light: #03a9f4;
+    --mui-palette-info-main: #0288d1;
+    --mui-palette-info-dark: #01579b;
+    --mui-palette-info-contrastText: #fff;
+
+    --mui-palette-success-light: #4caf50;
+    --mui-palette-success-main: #2e7d32;
+    --mui-palette-success-dark: #1b5e20;
+    --mui-palette-success-contrastText: #fff;
+
+    --mui-palette-text-primary: rgba(0,0,0,0.87);
+    --mui-palette-text-secondary: rgba(0,0,0,0.6);
+    --mui-palette-text-disabled: rgba(0,0,0,0.38);
+
+    --mui-palette-background-default: #fafafa;
+    --mui-palette-background-paper: #fff;
+
+    --mui-palette-divider: rgba(0,0,0,0.12);
+
+    --mui-palette-action-active: rgba(0,0,0,0.54);
+    --mui-palette-action-hover: rgba(0,0,0,0.04);
+    --mui-palette-action-hoverOpacity: 0.04;
+    --mui-palette-action-selected: rgba(0,0,0,0.08);
+    --mui-palette-action-selectedOpacity: 0.08;
+    --mui-palette-action-disabled: rgba(0,0,0,0.26);
+    --mui-palette-action-disabledBackground: rgba(0,0,0,0.12);
+    --mui-palette-action-disabledOpacity: 0.38;
+    --mui-palette-action-focus: rgba(0,0,0,0.12);
+    --mui-palette-action-focusOpacity: 0.12;
+    --mui-palette-action-activatedOpacity: 0.12;
+
+    --mui-palette-mode: light;
+    --mui-palette-contrastThreshold: 3;
+    --mui-palette-tonalOffset: 0.2;
+
+    /* Shape */
+    --mui-shape-borderRadius: 4px;
+
+    /* Spacing */
+    --mui-spacing-0: 0px;
+    --mui-spacing-1: 8px;
+    --mui-spacing-2: 16px;
+    --mui-spacing-3: 24px;
+    --mui-spacing-4: 32px;
+    --mui-spacing-5: 40px;
+    --mui-spacing-6: 48px;
+    --mui-spacing-7: 56px;
+    --mui-spacing-8: 64px;
+    --mui-spacing-9: 72px;
+    --mui-spacing-10: 80px;
+    --mui-spacing: 8px;
+
+    /* Shadows */
+    --mui-shadows-0: none;
+    --mui-shadows-1: 0px 1px 3px rgba(0,0,0,0.2), 0px 1px 1px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);
+    --mui-shadows-2: 0px 1px 5px rgba(0,0,0,0.2), 0px 2px 2px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+    --mui-shadows-3: 0px 1px 8px rgba(0,0,0,0.2), 0px 3px 4px rgba(0,0,0,0.14), 0px 3px 3px -2px rgba(0,0,0,0.12);
+    --mui-shadows-4: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px rgba(0,0,0,0.14), 0px 1px 10px rgba(0,0,0,0.12);
+    --mui-shadows-5: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px rgba(0,0,0,0.14), 0px 1px 14px rgba(0,0,0,0.12);
+    --mui-shadows-6: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px rgba(0,0,0,0.14), 0px 1px 18px rgba(0,0,0,0.12);
+    --mui-shadows-7: 0px 4px 5px -2px rgba(0,0,0,0.2), 0px 7px 10px rgba(0,0,0,0.14), 0px 2px 16px rgba(0,0,0,0.12);
+    --mui-shadows-8: 0px 5px 5px -3px rgba(0,0,0,0.2), 0px 8px 10px rgba(0,0,0,0.14), 0px 3px 14px rgba(0,0,0,0.12);
+    --mui-shadows-9: 0px 5px 6px -3px rgba(0,0,0,0.2), 0px 9px 12px rgba(0,0,0,0.14), 0px 3px 16px rgba(0,0,0,0.12);
+    --mui-shadows-10: 0px 6px 6px -3px rgba(0,0,0,0.2), 0px 10px 14px rgba(0,0,0,0.14), 0px 4px 18px rgba(0,0,0,0.12);
+    --mui-shadows-11: 0px 6px 7px -4px rgba(0,0,0,0.2), 0px 11px 15px rgba(0,0,0,0.14), 0px 4px 20px rgba(0,0,0,0.12);
+    --mui-shadows-12: 0px 7px 8px -4px rgba(0,0,0,0.2), 0px 12px 17px rgba(0,0,0,0.14), 0px 5px 22px rgba(0,0,0,0.12);
+    --mui-shadows-13: 0px 7px 8px -4px rgba(0,0,0,0.2), 0px 13px 19px rgba(0,0,0,0.14), 0px 5px 24px rgba(0,0,0,0.12);
+    --mui-shadows-14: 0px 7px 9px -4px rgba(0,0,0,0.2), 0px 14px 21px rgba(0,0,0,0.14), 0px 5px 26px rgba(0,0,0,0.12);
+    --mui-shadows-15: 0px 8px 9px -5px rgba(0,0,0,0.2), 0px 15px 22px rgba(0,0,0,0.14), 0px 6px 28px rgba(0,0,0,0.12);
+    --mui-shadows-16: 0px 8px 10px -5px rgba(0,0,0,0.2), 0px 16px 24px rgba(0,0,0,0.14), 0px 6px 30px rgba(0,0,0,0.12);
+    --mui-shadows-17: 0px 8px 11px -5px rgba(0,0,0,0.2), 0px 17px 26px rgba(0,0,0,0.14), 0px 6px 32px rgba(0,0,0,0.12);
+    --mui-shadows-18: 0px 9px 11px -5px rgba(0,0,0,0.2), 0px 18px 28px rgba(0,0,0,0.14), 0px 7px 34px rgba(0,0,0,0.12);
+    --mui-shadows-19: 0px 9px 12px -6px rgba(0,0,0,0.2), 0px 19px 29px rgba(0,0,0,0.14), 0px 7px 36px rgba(0,0,0,0.12);
+    --mui-shadows-20: 0px 10px 13px -6px rgba(0,0,0,0.2), 0px 20px 31px rgba(0,0,0,0.14), 0px 8px 38px rgba(0,0,0,0.12);
+    --mui-shadows-21: 0px 10px 13px -6px rgba(0,0,0,0.2), 0px 21px 33px rgba(0,0,0,0.14), 0px 8px 40px rgba(0,0,0,0.12);
+    --mui-shadows-22: 0px 10px 14px -6px rgba(0,0,0,0.2), 0px 22px 35px rgba(0,0,0,0.14), 0px 8px 42px rgba(0,0,0,0.12);
+    --mui-shadows-23: 0px 11px 14px -7px rgba(0,0,0,0.2), 0px 23px 36px rgba(0,0,0,0.14), 0px 9px 44px rgba(0,0,0,0.12);
+    --mui-shadows-24: 0px 11px 15px -7px rgba(0,0,0,0.2), 0px 24px 38px rgba(0,0,0,0.14), 0px 9px 46px rgba(0,0,0,0.12);
+
+    /* Typography */
+    --mui-typography-fontFamily: "Roboto","Helvetica","Arial",sans-serif;
+    --mui-typography-fontSize: 14px;
+    --mui-typography-fontWeightLight: 300;
+    --mui-typography-fontWeightRegular: 400;
+    --mui-typography-fontWeightMedium: 500;
+    --mui-typography-fontWeightBold: 700;
+
+    --mui-typography-h1-fontSize: 6rem;
+    --mui-typography-h1-fontWeight: 300;
+    --mui-typography-h1-lineHeight: 1.167;
+    --mui-typography-h1-letterSpacing: -0.01562em;
+
+    --mui-typography-h2-fontSize: 3.75rem;
+    --mui-typography-h2-fontWeight: 300;
+    --mui-typography-h2-lineHeight: 1.2;
+    --mui-typography-h2-letterSpacing: -0.00833em;
+
+    --mui-typography-h3-fontSize: 3rem;
+    --mui-typography-h3-fontWeight: 400;
+    --mui-typography-h3-lineHeight: 1.167;
+    --mui-typography-h3-letterSpacing: 0em;
+
+    --mui-typography-h4-fontSize: 2.125rem;
+    --mui-typography-h4-fontWeight: 400;
+    --mui-typography-h4-lineHeight: 1.235;
+    --mui-typography-h4-letterSpacing: 0.00735em;
+
+    --mui-typography-h5-fontSize: 1.5rem;
+    --mui-typography-h5-fontWeight: 400;
+    --mui-typography-h5-lineHeight: 1.334;
+    --mui-typography-h5-letterSpacing: 0em;
+
+    --mui-typography-h6-fontSize: 1.25rem;
+    --mui-typography-h6-fontWeight: 500;
+    --mui-typography-h6-lineHeight: 1.6;
+    --mui-typography-h6-letterSpacing: 0.0075em;
+
+    --mui-typography-subtitle1-fontSize: 1rem;
+    --mui-typography-subtitle1-fontWeight: 400;
+    --mui-typography-subtitle1-lineHeight: 1.75;
+    --mui-typography-subtitle1-letterSpacing: 0.00938em;
+
+    --mui-typography-subtitle2-fontSize: 0.875rem;
+    --mui-typography-subtitle2-fontWeight: 500;
+    --mui-typography-subtitle2-lineHeight: 1.57;
+    --mui-typography-subtitle2-letterSpacing: 0.00714em;
+
+    --mui-typography-body1-fontSize: 1rem;
+    --mui-typography-body1-fontWeight: 400;
+    --mui-typography-body1-lineHeight: 1.5;
+    --mui-typography-body1-letterSpacing: 0.00938em;
+
+    --mui-typography-body2-fontSize: 0.875rem;
+    --mui-typography-body2-fontWeight: 400;
+    --mui-typography-body2-lineHeight: 1.43;
+    --mui-typography-body2-letterSpacing: 0.01071em;
+
+    --mui-typography-button-fontSize: 0.875rem;
+    --mui-typography-button-fontWeight: 500;
+    --mui-typography-button-lineHeight: 1.75;
+    --mui-typography-button-letterSpacing: 0.02857em;
+
+    --mui-typography-caption-fontSize: 0.75rem;
+    --mui-typography-caption-fontWeight: 400;
+    --mui-typography-caption-lineHeight: 1.66;
+    --mui-typography-caption-letterSpacing: 0.03333em;
+
+    --mui-typography-overline-fontSize: 0.75rem;
+    --mui-typography-overline-fontWeight: 400;
+    --mui-typography-overline-lineHeight: 2.66;
+    --mui-typography-overline-letterSpacing: 0.08333em;
+}
+
+:root[data-mui-color-scheme="dark"] {
+    /* Palette */
+    --mui-palette-primary-light: #e3f2fd;
+    --mui-palette-primary-main: #90caf9;
+    --mui-palette-primary-dark: #42a5f5;
+    --mui-palette-primary-contrastText: rgba(0,0,0,0.87);
+
+    --mui-palette-secondary-light: #f3e5f5;
+    --mui-palette-secondary-main: #ce93d8;
+    --mui-palette-secondary-dark: #ab47bc;
+    --mui-palette-secondary-contrastText: rgba(0,0,0,0.87);
+
+    --mui-palette-error-light: #e57373;
+    --mui-palette-error-main: #f44336;
+    --mui-palette-error-dark: #d32f2f;
+    --mui-palette-error-contrastText: #fff;
+
+    --mui-palette-warning-light: #ffb74d;
+    --mui-palette-warning-main: #ffa726;
+    --mui-palette-warning-dark: #f57c00;
+    --mui-palette-warning-contrastText: rgba(0,0,0,0.87);
+
+    --mui-palette-info-light: #4fc3f7;
+    --mui-palette-info-main: #29b6f6;
+    --mui-palette-info-dark: #0288d1;
+    --mui-palette-info-contrastText: rgba(0,0,0,0.87);
+
+    --mui-palette-success-light: #81c784;
+    --mui-palette-success-main: #66bb6a;
+    --mui-palette-success-dark: #388e3c;
+    --mui-palette-success-contrastText: rgba(0,0,0,0.87);
+
+    --mui-palette-text-primary: rgba(255,255,255,0.87);
+    --mui-palette-text-secondary: rgba(255,255,255,0.7);
+    --mui-palette-text-disabled: rgba(255,255,255,0.5);
+
+    --mui-palette-background-default: #121212;
+    --mui-palette-background-paper: #121212;
+
+    --mui-palette-divider: rgba(255,255,255,0.12);
+
+    --mui-palette-action-active: rgba(255,255,255,0.54);
+    --mui-palette-action-hover: rgba(255,255,255,0.08);
+    --mui-palette-action-hoverOpacity: 0.08;
+    --mui-palette-action-selected: rgba(255,255,255,0.16);
+    --mui-palette-action-selectedOpacity: 0.16;
+    --mui-palette-action-disabled: rgba(255,255,255,0.3);
+    --mui-palette-action-disabledBackground: rgba(255,255,255,0.12);
+    --mui-palette-action-disabledOpacity: 0.38;
+    --mui-palette-action-focus: rgba(255,255,255,0.12);
+    --mui-palette-action-focusOpacity: 0.12;
+    --mui-palette-action-activatedOpacity: 0.24;
+
+    --mui-palette-mode: dark;
+    --mui-palette-contrastThreshold: 3;
+    --mui-palette-tonalOffset: 0.2;
+
+    /* Shape */
+    --mui-shape-borderRadius: 4px;
+
+    /* Spacing */
+    --mui-spacing-0: 0px;
+    --mui-spacing-1: 8px;
+    --mui-spacing-2: 16px;
+    --mui-spacing-3: 24px;
+    --mui-spacing-4: 32px;
+    --mui-spacing-5: 40px;
+    --mui-spacing-6: 48px;
+    --mui-spacing-7: 56px;
+    --mui-spacing-8: 64px;
+    --mui-spacing-9: 72px;
+    --mui-spacing-10: 80px;
+    --mui-spacing: 8px;
+
+    /* Shadows */
+    --mui-shadows-0: none;
+    --mui-shadows-1: 0px 1px 3px rgba(0,0,0,0.2), 0px 1px 1px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);
+    --mui-shadows-2: 0px 1px 5px rgba(0,0,0,0.2), 0px 2px 2px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+    --mui-shadows-3: 0px 1px 8px rgba(0,0,0,0.2), 0px 3px 4px rgba(0,0,0,0.14), 0px 3px 3px -2px rgba(0,0,0,0.12);
+    --mui-shadows-4: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px rgba(0,0,0,0.14), 0px 1px 10px rgba(0,0,0,0.12);
+    --mui-shadows-5: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px rgba(0,0,0,0.14), 0px 1px 14px rgba(0,0,0,0.12);
+    --mui-shadows-6: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px rgba(0,0,0,0.14), 0px 1px 18px rgba(0,0,0,0.12);
+    --mui-shadows-7: 0px 4px 5px -2px rgba(0,0,0,0.2), 0px 7px 10px rgba(0,0,0,0.14), 0px 2px 16px rgba(0,0,0,0.12);
+    --mui-shadows-8: 0px 5px 5px -3px rgba(0,0,0,0.2), 0px 8px 10px rgba(0,0,0,0.14), 0px 3px 14px rgba(0,0,0,0.12);
+    --mui-shadows-9: 0px 5px 6px -3px rgba(0,0,0,0.2), 0px 9px 12px rgba(0,0,0,0.14), 0px 3px 16px rgba(0,0,0,0.12);
+    --mui-shadows-10: 0px 6px 6px -3px rgba(0,0,0,0.2), 0px 10px 14px rgba(0,0,0,0.14), 0px 4px 18px rgba(0,0,0,0.12);
+    --mui-shadows-11: 0px 6px 7px -4px rgba(0,0,0,0.2), 0px 11px 15px rgba(0,0,0,0.14), 0px 4px 20px rgba(0,0,0,0.12);
+    --mui-shadows-12: 0px 7px 8px -4px rgba(0,0,0,0.2), 0px 12px 17px rgba(0,0,0,0.14), 0px 5px 22px rgba(0,0,0,0.12);
+    --mui-shadows-13: 0px 7px 8px -4px rgba(0,0,0,0.2), 0px 13px 19px rgba(0,0,0,0.14), 0px 5px 24px rgba(0,0,0,0.12);
+    --mui-shadows-14: 0px 7px 9px -4px rgba(0,0,0,0.2), 0px 14px 21px rgba(0,0,0,0.14), 0px 5px 26px rgba(0,0,0,0.12);
+    --mui-shadows-15: 0px 8px 9px -5px rgba(0,0,0,0.2), 0px 15px 22px rgba(0,0,0,0.14), 0px 6px 28px rgba(0,0,0,0.12);
+    --mui-shadows-16: 0px 8px 10px -5px rgba(0,0,0,0.2), 0px 16px 24px rgba(0,0,0,0.14), 0px 6px 30px rgba(0,0,0,0.12);
+    --mui-shadows-17: 0px 8px 11px -5px rgba(0,0,0,0.2), 0px 17px 26px rgba(0,0,0,0.14), 0px 6px 32px rgba(0,0,0,0.12);
+    --mui-shadows-18: 0px 9px 11px -5px rgba(0,0,0,0.2), 0px 18px 28px rgba(0,0,0,0.14), 0px 7px 34px rgba(0,0,0,0.12);
+    --mui-shadows-19: 0px 9px 12px -6px rgba(0,0,0,0.2), 0px 19px 29px rgba(0,0,0,0.14), 0px 7px 36px rgba(0,0,0,0.12);
+    --mui-shadows-20: 0px 10px 13px -6px rgba(0,0,0,0.2), 0px 20px 31px rgba(0,0,0,0.14), 0px 8px 38px rgba(0,0,0,0.12);
+    --mui-shadows-21: 0px 10px 13px -6px rgba(0,0,0,0.2), 0px 21px 33px rgba(0,0,0,0.14), 0px 8px 40px rgba(0,0,0,0.12);
+    --mui-shadows-22: 0px 10px 14px -6px rgba(0,0,0,0.2), 0px 22px 35px rgba(0,0,0,0.14), 0px 8px 42px rgba(0,0,0,0.12);
+    --mui-shadows-23: 0px 11px 14px -7px rgba(0,0,0,0.2), 0px 23px 36px rgba(0,0,0,0.14), 0px 9px 44px rgba(0,0,0,0.12);
+    --mui-shadows-24: 0px 11px 15px -7px rgba(0,0,0,0.2), 0px 24px 38px rgba(0,0,0,0.14), 0px 9px 46px rgba(0,0,0,0.12);
+
+    /* Typography */
+    --mui-typography-fontFamily: "Roboto","Helvetica","Arial",sans-serif;
+    --mui-typography-fontSize: 14px;
+    --mui-typography-fontWeightLight: 300;
+    --mui-typography-fontWeightRegular: 400;
+    --mui-typography-fontWeightMedium: 500;
+    --mui-typography-fontWeightBold: 700;
+    --mui-typography-h1-fontSize: 6rem;
+    --mui-typography-h1-fontWeight: 300;
+    --mui-typography-h1-lineHeight: 1.167;
+    --mui-typography-h1-letterSpacing: -0.01562em;
+    --mui-typography-h2-fontSize: 3.75rem;
+    --mui-typography-h2-fontWeight: 300;
+    --mui-typography-h2-lineHeight: 1.2;
+    --mui-typography-h2-letterSpacing: -0.00833em;
+    --mui-typography-h3-fontSize: 3rem;
+    --mui-typography-h3-fontWeight: 400;
+    --mui-typography-h3-lineHeight: 1.167;
+    --mui-typography-h3-letterSpacing: 0em;
+    --mui-typography-h4-fontSize: 2.125rem;
+    --mui-typography-h4-fontWeight: 400;
+    --mui-typography-h4-lineHeight: 1.235;
+    --mui-typography-h4-letterSpacing: 0.00735em;
+    --mui-typography-h5-fontSize: 1.5rem;
+    --mui-typography-h5-fontWeight: 400;
+    --mui-typography-h5-lineHeight: 1.334;
+    --mui-typography-h5-letterSpacing: 0em;
+    --mui-typography-h6-fontSize: 1.25rem;
+    --mui-typography-h6-fontWeight: 500;
+    --mui-typography-h6-lineHeight: 1.6;
+    --mui-typography-h6-letterSpacing: 0.0075em;
+    --mui-typography-subtitle1-fontSize: 1rem;
+    --mui-typography-subtitle1-fontWeight: 400;
+    --mui-typography-subtitle1-lineHeight: 1.75;
+    --mui-typography-subtitle1-letterSpacing: 0.00938em;
+    --mui-typography-subtitle2-fontSize: 0.875rem;
+    --mui-typography-subtitle2-fontWeight: 500;
+    --mui-typography-subtitle2-lineHeight: 1.57;
+    --mui-typography-subtitle2-letterSpacing: 0.00714em;
+    --mui-typography-body1-fontSize: 1rem;
+    --mui-typography-body1-fontWeight: 400;
+    --mui-typography-body1-lineHeight: 1.5;
+    --mui-typography-body1-letterSpacing: 0.00938em;
+    --mui-typography-body2-fontSize: 0.875rem;
+    --mui-typography-body2-fontWeight: 400;
+    --mui-typography-body2-lineHeight: 1.43;
+    --mui-typography-body2-letterSpacing: 0.01071em;
+    --mui-typography-button-fontSize: 0.875rem;
+    --mui-typography-button-fontWeight: 500;
+    --mui-typography-button-lineHeight: 1.75;
+    --mui-typography-button-letterSpacing: 0.02857em;
+    --mui-typography-caption-fontSize: 0.75rem;
+    --mui-typography-caption-fontWeight: 400;
+    --mui-typography-caption-lineHeight: 1.66;
+    --mui-typography-caption-letterSpacing: 0.03333em;
+    --mui-typography-overline-fontSize: 0.75rem;
+    --mui-typography-overline-fontWeight: 400;
+    --mui-typography-overline-lineHeight: 2.66;
+    --mui-typography-overline-letterSpacing: 0.08333em;
+}

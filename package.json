@@ -1,0 +1,83 @@
+{
+  "name": "react-to-native-element",
+  "version": "1.0.0",
+  "description": "Convert React components to native Web Components.",
+  "homepage": "https://github.com/<user>/<repo>#readme",
+  "author": "Adil BOUJRAD",
+  "license": "MIT",
+  "keywords": [
+    "React",
+    "Web Component"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<user>/<repo>.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<user>/<repo>/issues"
+  },
+  "type": "module",
+  "main": "./dist/react-to-native-element.umd.js",
+  "module": "./dist/react-to-native-element.es.js",
+  "types": "./dist/react-to-native-element.d.ts",
+  "exports": {
+    ".": {
+      "default": "./dist/react-to-native-element.es.js",
+      "import": "./dist/react-to-native-element.es.js",
+      "require": "./dist/react-to-native-element.umd.js",
+      "types": "./dist/react-to-native-element.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18.17",
+    "npm": ">=9"
+  },
+  "packageManager": "npm@10",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "depcheck": "depcheck",
+    "test": "vitest run",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test && npm run build",
+    "release:patch": "npm version patch && git push --follow-tags && npm publish",
+    "release:minor": "npm version minor && git push --follow-tags && npm publish",
+    "release:major": "npm version major && git push --follow-tags && npm publish",
+    "pack": "npm pack"
+  },
+  "peerDependencies": {
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.2.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.2.0",
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.7.0",
+    "depcheck": "^1.4.7",
+    "jsdom": "^26.1.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.5",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-static-copy": "^3.1.1",
+    "vitest": "^3.2.4"
+  }
+}
